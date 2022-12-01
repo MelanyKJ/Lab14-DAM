@@ -4,8 +4,10 @@
              x:Class="Database2022.MainPage">
 
     <StackLayout>
-        <Entry Placeholder="Enter Name" x:Name="txtName" HorizontalOptions="FillAndExpand"/>
-        <Entry Placeholder="Enter LastName" x:Name="txtLastName" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Enter Nombre" x:Name="txtNombre" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Enter Apellido" x:Name="txtApellido" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Enter Direccion" x:Name="txtDireccion" HorizontalOptions="FillAndExpand"/>
+        <Entry Placeholder="Enter Dni" x:Name="txtDni" HorizontalOptions="FillAndExpand"/>
         
         <StackLayout Orientation="Horizontal">
             <Button Text="Save" Clicked="Button_Clicked"/>
@@ -15,13 +17,15 @@
         <Entry Placeholder="Filter" x:Name="txtFilter" HorizontalOptions="FillAndExpand"/>
         <Button Text="ShowByText" Clicked="Button_Clicked_2"/>
         
-        <ListView x:Name="lvPeople">
+        <ListView x:Name="lvEstudiante">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                     <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding FirstName}"></Label>
-                            <Label Text="{Binding LastName}"></Label>
+                            <Label Text="{Binding Nombre}"></Label>
+                            <Label Text="{Binding Apellido}"></Label>
+                            <Label Text="{Binding Direccion}"></Label>
+                            <Label Text="{Binding Dni}"></Label>
                         </StackLayout>
                     
                         
